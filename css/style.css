@@ -205,12 +205,12 @@ address {
   background: var(--navyblue-background-cl);
   padding-top: 180px;
   padding-bottom: 180px;
-
   display: block;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office-min.jpg);
   background-repeat: no-repeat;
   max-width: 1440px;
+  margin: 0 auto;
   background-position: center;
   background-size: cover;
 }
@@ -264,14 +264,16 @@ address {
   width: 264px;
 }
 .benefits-image {
-  padding-left: 100px;
-  padding-right: 100px;
-  background: #f4f4fd;
+  background-color: #f4f4fd;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
   display: flex;
   margin-bottom: 8px;
+  height: 112px;
+}
+.benefits-icons {
+  height: 64px;
 }
 
 /* ==============Main context==================*/
@@ -313,20 +315,28 @@ address {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 32px;
 }
 .team-item {
-  display: flex;
-  background: #4d5ae5;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   width: 40px;
   height: 40px;
 }
-.team-item:hover,
+/*.team-item:hover,
 .team-item:focus {
   background: #404bbf;
+}*/
+.team-link {
+  display: flex;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.team-link:hover,
+.team-link:focus {
+  background: #404bbf;
+  border-radius: 50%;
 }
 .team-icons-block {
   margin-top: 8px;
@@ -385,6 +395,7 @@ address {
 .portfolio-link:active {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+  display: block;
 }
 .row-image {
   min-width: 360px;
@@ -405,32 +416,36 @@ address {
   justify-content: center;
   gap: 24px;
 }
+.customers-block {
+  flex-basis: calc((100%-24px) / 6);
+}
 .customers-link {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #8e8f99;
+  fill: #8e8f99;
   border-radius: 4px;
-  padding: 16px 32px;
+  height: 88px;
 }
 .customers-link:hover,
 .customers-link:focus {
-  border: 1px solid #404bbf;
-  border-radius: 4px;
-}
-.customers-icons {
-  fill: #8e8f99;
-}
-.customers-icons:hover,
-.customers-icons:focus {
+  border-color: #404bbf;
   fill: #404bbf;
 }
+
 /*===================Footer====================*/
 
 footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background: var(--navyblue-background-cl);
+}
+.footer-container {
+  display: flex;
+}
+.footer-nav {
+  padding-right: 120px;
 }
 .footer-logo {
   font-family: var(--main-font-raleway);
@@ -453,9 +468,11 @@ footer {
   max-width: 264px;
 }
 .footer-title {
+  font-weight: 500;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 .footer-icons-block {
 }
@@ -473,4 +490,8 @@ footer {
   color: var(--color-link);
   width: 40px;
   height: 40px;
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: rgba(49, 208, 170, 1);
 }
