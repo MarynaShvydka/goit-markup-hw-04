@@ -152,6 +152,9 @@ body {
 }
 .header-web {
   color: var(--color-navigation);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-web:hover,
 .header-web:focus {
@@ -164,12 +167,27 @@ body {
   /*Content*/
 }
 .header-link {
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: var(--navyblue-txt-cl);
   /*Content*/
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -25px;
+  width: 100%;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
 }
 .header-link:hover,
 .header-link:focus {
@@ -192,6 +210,10 @@ address {
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   color: var(--slate-txt-cl);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -240,6 +262,10 @@ address {
   margin: 0 auto;
   padding: 16px 32px;
   border: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -333,11 +359,14 @@ address {
   justify-content: center;
   width: 100%;
   height: 100%;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link:hover,
 .team-link:focus {
-  background: #404bbf;
-  border-radius: 50%;
+  background-color: #404bbf;
 }
 .team-icons-block {
   margin-top: 8px;
@@ -365,6 +394,10 @@ address {
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--iris-txt-cl);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-item:hover,
 .button-item:focus {
@@ -391,12 +424,39 @@ address {
 .row {
   display: block;
 }
+.portfolio-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  font-family: var(--main-font-roboto);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2calc (24 / 16);
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  position: absolute;
+  display: block;
+  transform: translate(0, 100%);
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 40px 32px 0px 32px;
+  background: #4d5ae5;
+}
+.portfolio-link:hover .overlay {
+  transform: translate(0);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .portfolio-link:hover,
 .portfolio-link:focus,
 .portfolio-link:active {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-  display: block;
 }
 .row-image {
   min-width: 360px;
@@ -428,6 +488,10 @@ address {
   fill: #8e8f99;
   border-radius: 4px;
   height: 88px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -491,6 +555,10 @@ footer {
   color: var(--color-link);
   width: 40px;
   height: 40px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
